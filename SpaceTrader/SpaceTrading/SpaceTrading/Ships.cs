@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SpaceTrading
 {
-    class Ships
+    public class Ships
     {
     }
 }

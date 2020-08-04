@@ -9,9 +9,10 @@ namespace SpaceTrading
         {
             
             {
-                System.Console.SetWindowSize
+                //System.Console.SetWindowSize
+                startGame();
 
-                
+            
                
             }
         }
