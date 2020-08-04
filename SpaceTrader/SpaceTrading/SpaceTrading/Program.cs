@@ -9,7 +9,7 @@ namespace SpaceTrading
         {
             
             {
-                
+                System.Console.SetWindowSize
 
                 // Start by asking for the user's name:
                 Console.Write("What is your name?: ");
