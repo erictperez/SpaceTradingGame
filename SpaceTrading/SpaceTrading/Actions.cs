@@ -38,7 +38,7 @@ namespace SpaceTrading
             }
             catch
             {
-                throw new SystemException;
+                throw new SystemException();
             }
          
         }
@@ -74,7 +74,7 @@ namespace SpaceTrading
             }
             catch
             {
-                throw new SystemException;
+                throw new SystemException();
             }
           
         }

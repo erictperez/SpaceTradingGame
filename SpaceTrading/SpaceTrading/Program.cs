@@ -4,13 +4,14 @@ namespace SpaceTrading
 {
     class Program
     {
-        enum { X, Y};
+       // enum { X, Y};
         static void Main(string[] args)
         {
             
             {
                 //System.Console.SetWindowSize
-                startGame();
+                Actions actions = new Actions();
+                actions.startGame();
 
             
                
