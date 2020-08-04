@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\erau\\Documents\\GitHub\\SpaceTradingGame\\SpaceTrader\\SpaceTrader\\SpaceTrader.csproj",
-      "projectName": "SpaceTrader",
-      "projectPath": "C:\\Users\\erau\\Documents\\GitHub\\SpaceTradingGame\\SpaceTrader\\SpaceTrader\\SpaceTrader.csproj",
+      "projectUniqueName": "C:\\Users\\erau\\Documents\\GitHub\\SpaceTradingGame\\SpaceTrading\\SpaceTrading\\SpaceTrading.csproj",
+      "projectName": "SpaceTrading",
+      "projectPath": "C:\\Users\\erau\\Documents\\GitHub\\SpaceTradingGame\\SpaceTrading\\SpaceTrading\\SpaceTrading.csproj",
       "packagesPath": "C:\\Users\\erau\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\erau\\Documents\\GitHub\\SpaceTradingGame\\SpaceTrader\\SpaceTrader\\obj\\",
+      "outputPath": "C:\\Users\\erau\\Documents\\GitHub\\SpaceTradingGame\\SpaceTrading\\SpaceTrading\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\erau\\AppData\\Roaming\\NuGet\\NuGet.Config",

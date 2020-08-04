@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\erau\\Documents\\GitHub\\SpaceTradingGame\\SpaceTrader\\SpaceTrading\\SpaceTrading\\SpaceTrading.csproj": {}
+    "C:\\Users\\erau\\Documents\\GitHub\\SpaceTradingGame\\SpaceTrading\\SpaceTrading\\SpaceTrading.csproj": {}
   },
   "projects": {
-    "C:\\Users\\erau\\Documents\\GitHub\\SpaceTradingGame\\SpaceTrader\\SpaceTrading\\SpaceTrading\\SpaceTrading.csproj": {
+    "C:\\Users\\erau\\Documents\\GitHub\\SpaceTradingGame\\SpaceTrading\\SpaceTrading\\SpaceTrading.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\erau\\Documents\\GitHub\\SpaceTradingGame\\SpaceTrader\\SpaceTrading\\SpaceTrading\\SpaceTrading.csproj",
+        "projectUniqueName": "C:\\Users\\erau\\Documents\\GitHub\\SpaceTradingGame\\SpaceTrading\\SpaceTrading\\SpaceTrading.csproj",
         "projectName": "SpaceTrading",
-        "projectPath": "C:\\Users\\erau\\Documents\\GitHub\\SpaceTradingGame\\SpaceTrader\\SpaceTrading\\SpaceTrading\\SpaceTrading.csproj",
+        "projectPath": "C:\\Users\\erau\\Documents\\GitHub\\SpaceTradingGame\\SpaceTrading\\SpaceTrading\\SpaceTrading.csproj",
         "packagesPath": "C:\\Users\\erau\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\erau\\Documents\\GitHub\\SpaceTradingGame\\SpaceTrader\\SpaceTrading\\SpaceTrading\\obj\\",
+        "outputPath": "C:\\Users\\erau\\Documents\\GitHub\\SpaceTradingGame\\SpaceTrading\\SpaceTrading\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\erau\\AppData\\Roaming\\NuGet\\NuGet.Config",
