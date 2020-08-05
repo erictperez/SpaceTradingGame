@@ -10,7 +10,7 @@ namespace SpaceTrading
         double xpos;
         double ypos;
 
-        decimal 
+        //decimal 
     }
     class Planets
     {
