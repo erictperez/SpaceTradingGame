@@ -10,18 +10,38 @@ namespace SpaceTrading
         {
             
         }
+        public void Run()
+        {
+            //bool quit;
+
+            //do
+            {
+                startGame();
+                leaveChoice();
+                planetChoice();
+               
+               
+
+            } 
+            //while (!quit);
+
+
+            Console.WriteLine(); // Ensures "press any key to quit..." is on its own line
+        }
+
         public void startGame()
         { 
             // Start by asking for the user's name:
             Console.Write("What is your name?: ");
             string name = Console.ReadLine();
             Console.WriteLine($"Hello, {name}! Welcome to your story.");
-            Console.WriteLine("Are you ready to take off?");
-            Console.Write("Type YES or NO: ");
+            
            
         }
         public void leaveChoice()
         {
+            Console.WriteLine("Are you ready to take off?");
+            Console.Write("Type YES or NO: ");
             string leaveChoice = Console.ReadLine();
             string upperChoice = leaveChoice.ToUpper();
             try
@@ -49,12 +69,13 @@ namespace SpaceTrading
             {
                 Console.WriteLine("You've landed on planet X, the locals are hostile, Will you fight!?!");
                 Console.Write("Type your answer:");
-
+                actionChoice();
             }
             else if (planetChoice == "Y")
             {
                 Console.WriteLine("You've landed on planet Y, the locals are offer you a choice of three treasure chest, which one will you take!?!");
                 Console.Write("Enter a number (1-3):");
+                chestChoice();
             }
         }
     
