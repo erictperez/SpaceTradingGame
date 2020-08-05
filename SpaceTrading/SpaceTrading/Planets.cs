@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SpaceTrading
 {
-    enum { X, Y };
+    enum planetsList{ Earth, Tarantulon6, Amazonia, Tornadus, Decapod10, Thuban9 };
     class Planets
     {
     }
