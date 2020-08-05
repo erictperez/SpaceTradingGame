@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using System.Text;
+using System.IO;
 
 namespace SpaceTrading
 {
@@ -19,6 +21,9 @@ namespace SpaceTrading
                 startGame();
                 leaveChoice();
                 planetChoice();
+               
+               
+
             } 
             //while (!quit);
 
@@ -29,27 +34,48 @@ namespace SpaceTrading
         public void startGame()
         { 
             // Start by asking for the user's name:
-            Console.Write("What is your name?: ");
+            Print("What is your name?: ");
             string name = Console.ReadLine();
-            Console.WriteLine($"Hello, {name}! Welcome to your story.");      
+            Print($"Hello, {name}! Welcome to your story.");
+            
+           
         }
         public void leaveChoice()
         {
-            Console.WriteLine("Are you ready to take off?");
+            Print("Are you ready to take off?");
             Console.Write("Type YES or NO: ");
             string leaveChoice = Console.ReadLine();
             string upperChoice = leaveChoice.ToUpper();
+            string line;
             try
             {
                 if (upperChoice == "NO")
                 {
-                    Console.WriteLine("Not much of an adventure.");
+                    Print("Not much of an adventure.");
                 }
                 else if (upperChoice == "YES")
                 {
-                    Console.WriteLine("You've borded the ship and the crew is already on board. Choose your destinantion");
-                    Console.Write("Type X or Y:");
+
+                    try
+                    {
+                        StreamReader sr = new StreamReader(@"C:\Users\bulld\Desktop\MSSA Program Files\spaceship.txt");
+                        line = sr.ReadLine();
+                        while (line != null)
+                        {
+                            Print(line, 1);
+                            line = sr.ReadLine();
+                        }
+                        sr.Close();                    
+                        Print("You've borded the ship and the crew is already on board. Choose your destinantion");
+                        Print("Type X or Y:");
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine("Exception: " + e.Message);
+                    }
+                    
                 }
+
             }
             catch
             {
@@ -59,18 +85,20 @@ namespace SpaceTrading
         }
         public void planetChoice()
         {
+            
             string planetChoice = Console.ReadLine().ToUpper();
             if (planetChoice == "X")
             {
-                Console.WriteLine("You've landed on planet X, the locals are hostile, Will you fight!?!");
-                Console.Write("Type your answer:");
+                Print("You've landed on planet X, the locals are hostile, Will you fight!?!");
+                Print("Type your answer:");
                 actionChoice();
             }
             else if (planetChoice == "Y")
             {
-                Console.WriteLine("You've landed on planet Y, the locals are offer you a choice of three treasure chest, which one will you take!?!");
-                Console.Write("Enter a number (1-3):");
+                Print("You've landed on planet Y, the locals are offer you a choice of three treasure chest, which one will you take!?!");
+                Print("Enter a number (1-3):");
                 chestChoice();
+
             }
         }
     
@@ -81,11 +109,11 @@ namespace SpaceTrading
             {
                 if (actionChoice == "YES")
                 {
-                    Console.WriteLine("You successfully bludgeon all the locals. You now have your payment and some extra gas.");
+                    Print("You successfully bludgeon all the locals. You now have your payment and some extra gas.");
                 }
                 else
                 {
-                    Console.WriteLine("You were flayed and battered.");
+                    Print("You were flayed and battered.");
                 }
             }
             catch
@@ -101,19 +129,26 @@ namespace SpaceTrading
             switch (chestChoice)
             {
                 case "1":
-                    Console.WriteLine("You choose the first chest. Lucky choice! There is 200 space dollars");
+                    Print("You choose the first chest. Lucky choice! There is 200 space dollars");
                     break;
                 case "2":
-                    Console.WriteLine("You choose the second chest. A space snake bit you and you died.");
+                    Print("You choose the second chest. A space snake bit you and you died.");
                     break;
                 case "3":
-                    Console.WriteLine("You choose the third chest. It is empty.....");
+                    Print("You choose the third chest. It is empty.....");
                     break;
                 default:
                     break;
             }
         }
-
-
+        public static void Print(string text, int speed = 80)
+        {
+            foreach (char c in text)
+            {
+                Console.Write(c);
+                System.Threading.Thread.Sleep(speed);
+            }
+            Console.WriteLine();
+        }
     }
 }
