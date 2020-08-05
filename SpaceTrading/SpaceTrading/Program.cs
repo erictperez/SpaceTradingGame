@@ -4,7 +4,7 @@ namespace SpaceTrading
 {
     class Program
     {
-       // enum { X, Y};
+      
         static void Main(string[] args)
         {
             

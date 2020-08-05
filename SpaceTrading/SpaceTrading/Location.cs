@@ -4,8 +4,7 @@ using System.Text;
 
 namespace SpaceTrading
 {
-    enum { X, Y };
-    class Planets
+    class Location
     {
     }
 }
