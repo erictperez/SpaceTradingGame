@@ -19,9 +19,6 @@ namespace SpaceTrading
                 startGame();
                 leaveChoice();
                 planetChoice();
-               
-               
-
             } 
             //while (!quit);
 
@@ -34,9 +31,7 @@ namespace SpaceTrading
             // Start by asking for the user's name:
             Console.Write("What is your name?: ");
             string name = Console.ReadLine();
-            Console.WriteLine($"Hello, {name}! Welcome to your story.");
-            
-           
+            Console.WriteLine($"Hello, {name}! Welcome to your story.");      
         }
         public void leaveChoice()
         {
