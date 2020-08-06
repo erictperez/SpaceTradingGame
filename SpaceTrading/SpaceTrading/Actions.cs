@@ -34,10 +34,26 @@ namespace SpaceTrading
         public void startGame()
         { 
             // Start by asking for the user's name:
+            string line;
             Print("What is your name?: ");
             string name = Console.ReadLine();
             Print($"Hello, {name}! Welcome to your story.");
-            
+            try
+                    {
+                        StreamReader sr = new StreamReader(@"C:\Users\bulld\source\repos\SpaceTradingGame\SpaceTrading\spaceship.txt");
+                        line = sr.ReadLine();
+                        while (line != null)
+                        {
+                            Print(line, 1);
+                            line = sr.ReadLine();
+                        }
+                        sr.Close();                    
+
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine("Exception: " + e.Message);
+                    }
            
         }
         public void leaveChoice()
@@ -55,25 +71,27 @@ namespace SpaceTrading
                 }
                 else if (upperChoice == "YES")
                 {
-
+                        //Print("You've boarded the ship and the crew is already on board. Choose your destinantion");
+                        //Print("Type X or Y:");
+                    
                     try
                     {
-                        StreamReader sr = new StreamReader(@"C:\Users\bulld\Desktop\MSSA Program Files\spaceship.txt");
+                        StreamReader sr = new StreamReader(@"C:\Users\bulld\source\repos\SpaceTradingGame\SpaceTrading\blastoff.txt");
                         line = sr.ReadLine();
                         while (line != null)
                         {
                             Print(line, 1);
                             line = sr.ReadLine();
                         }
-                        sr.Close();                    
-                        Print("You've borded the ship and the crew is already on board. Choose your destinantion");
+                        sr.Close();
+                        Print("You've boarded the ship with your computerized crew. Choose your destinantion");
                         Print("Type X or Y:");
                     }
                     catch (Exception e)
                     {
                         Console.WriteLine("Exception: " + e.Message);
                     }
-                    
+
                 }
 
             }
@@ -85,7 +103,7 @@ namespace SpaceTrading
         }
         public void planetChoice()
         {
-            
+
             string planetChoice = Console.ReadLine().ToUpper();
             if (planetChoice == "X")
             {
@@ -141,7 +159,7 @@ namespace SpaceTrading
                     break;
             }
         }
-        public static void Print(string text, int speed = 80)
+        public static void Print(string text, int speed = 1)
         {
             foreach (char c in text)
             {
