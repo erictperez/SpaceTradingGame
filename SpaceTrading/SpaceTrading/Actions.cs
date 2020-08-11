@@ -32,8 +32,27 @@ namespace SpaceTrading
 
             Console.WriteLine(); // Ensures "press any key to quit..." is on its own line
         }
+        public static void closingMessage(QuitReason quitReason)
+        {
+            Console.Clear();
+            switch (quitReason)
+            {
 
-        public void startGame()
+                case QuitReason.UserQuit:
+                    Console.WriteLine("See you later.... \n\n");
+                    break;
+                case QuitReason.Age:
+                    Console.WriteLine("You are too old \n\n");
+                    break;
+                case QuitReason.OutOfMoney:
+                    Console.WriteLine("Youre broke $ 0.00  \n\n");
+                    break;
+                case QuitReason.DontQuit:
+                    throw new NotImplementedException("No quitting");
+                    break;
+            }
+
+            public void startGame()
         { 
             // Start by asking for the user's name:
             
