@@ -7,7 +7,7 @@ namespace SpaceTrading
     public enum QuitReason { DontQuit, UserQuit, Age, OutOfMoney };
     class App
     {
-        List<Location> locations = new List<Location>;
+        List<Location> locations = new List<Location>();
         Location currentLocation;
         public App()
         {
@@ -18,7 +18,7 @@ namespace SpaceTrading
         {
             Actions.startGame();
             Actions.leaveChoice();
-            Actions.planetChoice();
+            Actions.planetChoiceA();
             eventLoop();
             Actions.closingMessage();
 
