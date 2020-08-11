@@ -12,9 +12,9 @@ namespace SpaceTrading
     {
         public Actions()
         {
-            
+
         }
-        public void Run()
+        public static void Run()
         {
             //bool quit;
 
@@ -23,10 +23,10 @@ namespace SpaceTrading
                 startGame();
                 leaveChoice();
                 planetChoiceA();
-               
-               
 
-            } 
+
+
+            }
             //while (!quit);
 
 
@@ -51,34 +51,35 @@ namespace SpaceTrading
                     throw new NotImplementedException("No quitting");
                     break;
             }
-
-            public void startGame()
-        { 
+        }
+        public static void startGame()
+        {
             // Start by asking for the user's name:
-            
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.BackgroundColor = ConsoleColor.Black;
             string line;
             Print("What is your name?: ");
             string name = Console.ReadLine();
             Print($"Hello, {name}! Welcome to your story.");
             try
-                    {
-                        StreamReader sr = new StreamReader(@"C:\Users\bulld\source\repos\SpaceTradingGame\SpaceTrading\spaceship.txt");
-                        line = sr.ReadLine();
-                        while (line != null)
-                        {
-                            Print(line, 1);
-                            line = sr.ReadLine();
-                        }
-                        sr.Close();                    
+            {
+                StreamReader sr = new StreamReader(@"C:\Users\bulld\source\repos\SpaceTradingGame\SpaceTrading\spaceship.txt");
+                line = sr.ReadLine();
+                while (line != null)
+                {
+                    Print(line, 1);
+                    line = sr.ReadLine();
+                }
+                sr.Close();
 
-                    }
-                    catch (Exception e)
-                    {
-                        Console.WriteLine("Exception: " + e.Message);
-                    }
-           
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Exception: " + e.Message);
+            }
+
         }
-        public void leaveChoice()
+        public static void leaveChoice()
         {
             Print("Are you ready to take off?");
             Console.Write("Type YES or NO: ");
@@ -93,9 +94,9 @@ namespace SpaceTrading
                 }
                 else if (upperChoice == "YES")
                 {
-                        //Print("You've boarded the ship and the crew is already on board. Choose your destinantion");
-                        //Print("Type X or Y:");
-                    
+                    //Print("You've boarded the ship and the crew is already on board. Choose your destinantion");
+                    //Print("Type X or Y:");
+
                     try
                     {
                         StreamReader sr = new StreamReader(@"C:\Users\bulld\source\repos\SpaceTradingGame\SpaceTrading\blastoff.txt");
@@ -121,9 +122,9 @@ namespace SpaceTrading
             {
                 throw new SystemException();
             }
-         
+
         }
-        public void planetChoiceA()
+        public static void planetChoiceA()
         {
 
             string planetChoiceA = Console.ReadLine().ToUpper();
@@ -145,13 +146,13 @@ namespace SpaceTrading
                 {
                     Console.WriteLine("Exception: " + e.Message);
                 }
-                
+
                 Print("You have chosen Planet Amazonia. You set auto-pilot and land safely. The planet has a mall filled with scavenger trading posts. A savage scavenger appears. What do you do?!?");
                 actionChoiceA();
             }
 
         }
-        public void planetChoiceD()
+        public static void planetChoiceD()
         {
 
             string planetChoiceD = Console.ReadLine().ToUpper();
@@ -179,7 +180,7 @@ namespace SpaceTrading
             }
 
         }
-        public void planetChoiceE()
+        public static void planetChoiceE()
         {
 
             string planetChoiceE = Console.ReadLine().ToUpper();
@@ -207,7 +208,7 @@ namespace SpaceTrading
             }
 
         }
-        public void planetChoiceT()
+        public static void planetChoiceT()
         {
 
             string planetChoiceT = Console.ReadLine().ToUpper();
@@ -234,14 +235,67 @@ namespace SpaceTrading
             }
 
         }
-
-        public void actionChoiceA()
+        public static void planetChoiceTA()
         {
- 
+            string planetChoiceTA = Console.ReadLine().ToUpper();
+            if (planetChoiceTA == "6")
+            {
+                try
+                {
+                    string line;
+                    StreamReader sr = new StreamReader(@"C:\Users\bulld\source\repos\SpaceTradingGame\SpaceTrading\amazonia.txt");
+                    line = sr.ReadLine();
+                    while (line != null)
+                    {
+                        Print(line, 1);
+                        line = sr.ReadLine();
+                    }
+                    sr.Close();
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Exception: " + e.Message);
+                }
+
+                Print("You have chosen Planet Tarantulon6, you set auto pilot and land safely. The planet has no human life but a cornicopia amount of 8 ft. tarantulas. Randomly, a tarantula in a trench coat appears!!!  What do you do?!?");
+                actionChoiceTA();
+
+            }
+        }
+        public static void planetChoiceTH()
+        {
+            string planetChoiceTH = Console.ReadLine().ToUpper();
+            if (planetChoiceTH == "9")
+            {
+                try
+                {
+                    string line;
+                    StreamReader sr = new StreamReader(@"C:\Users\bulld\source\repos\SpaceTradingGame\SpaceTrading\amazonia.txt");
+                    line = sr.ReadLine();
+                    while (line != null)
+                    {
+                        Print(line, 1);
+                        line = sr.ReadLine();
+                    }
+                    sr.Close();
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Exception: " + e.Message);
+                }
+
+                Print("You have chosen Planet Thuban9, you set auto pilot and land safely. The planet has human like creatures with Grade A Intellect but the only downside is the Thuban9 species are blind in adulthood. Randomly, a metal steel square tube appears!!!  What do you do?!?");
+                actionChoiceTH();
+
+            }
+        }
+        public static void actionChoiceA()
+        {
+
             Print("You have two options. K)ill Scavenger   OR  T)rade with Scavenger");
             Print("Type your answer:");
-                
-           using StreamReader sr = new StreamReader(@"C:\Users\bulld\source\repos\SpaceTradingGame\SpaceTrading\alienA.txt");
+
+            using StreamReader sr = new StreamReader(@"C:\Users\bulld\source\repos\SpaceTradingGame\SpaceTrading\alienA.txt");
             string line;
             do
             {
@@ -249,7 +303,7 @@ namespace SpaceTrading
                 Console.WriteLine(line);
             } while (line != null);
 
-            
+
             string actionChoiceA = Console.ReadLine().ToUpper();
             try
             {
@@ -272,10 +326,9 @@ namespace SpaceTrading
             {
                 throw new SystemException();
             }
-          
-        }
 
-        public void actionChoiceB()
+        }
+        public static void actionChoiceB()
         {
 
             Print("You have two options. D)rop Package off on a Pod   OR  C)ut into Pod because your curious!");
@@ -313,7 +366,81 @@ namespace SpaceTrading
             }
 
         }
-        public void tradeChoiceA()
+        public static void actionChoiceTA()
+        {
+
+            Print("You have two options. A) Pull out huge spray can and kill tarantula   OR  B) Trade with tarantula.");
+            Print("Type your answer:");
+
+            using StreamReader sr = new StreamReader(@"C:\Users\bulld\source\repos\SpaceTradingGame\SpaceTrading\alienA.txt");
+            string line;
+            do
+            {
+                line = sr.ReadLine();
+                Console.WriteLine(line);
+            } while (line != null);
+
+
+            string actionChoiceTA = Console.ReadLine().ToUpper();
+            try
+            {
+                if (actionChoiceTA == "A")
+                {
+                    Print("You pull out a regular sized Tarantula spray can.");
+                    Print("Unfortunately, the Tarantula shoots its web at the spray can and your entire body! As it slowly consumes you, your vision fades into the dark.");
+                    Print("Rest In Peace Fellow Explorer! Try not to be so violent!");
+                }
+                else if (actionChoiceTA == "B")
+                {
+                    Print("You trade your currency for the following:");
+                    tradeChoiceB();
+                }
+            }
+            catch
+            {
+                throw new SystemException();
+            }
+
+        }
+        public static void actionChoiceTH()
+        {
+
+            Print("You have three options. A) Crawl into the tube   OR  B) Set the package into the tube and return to ship immediately   OR C) Look in the tube!");
+            Print("Type your answer:");
+
+            using StreamReader sr = new StreamReader(@"C:\Users\bulld\source\repos\SpaceTradingGame\SpaceTrading\alienA.txt");
+            string line;
+            do
+            {
+                line = sr.ReadLine();
+                Console.WriteLine(line);
+            } while (line != null);
+
+
+            string actionChoiceTH = Console.ReadLine().ToUpper();
+            try
+            {
+                if (actionChoiceTH == "A")
+                {
+                    Print("You crawl into the tube and noticed the color of Gold at the very bottom! The closer you get towards the Gold Color, you noticed the Gold was never Gold at all. The Gold image disappears. As you continue to crawl through the tube, you noticed yourself feeling disoriented. With no sense of direction, you continue to crawl..........................and crawl...................and crawl...............................          Meanwhile, the Thuban9 species laugh behind the interrogation window style as you slowly lose your mind!!!!! Rest Easy Fellow Explorer......if you can!!!");
+                }
+                else if (actionChoiceTH == "B")
+                {
+                    Print("You successfully insert the package into the tube and immediately return to the ship. On your way to the ship, a paper plane flys out of the square tube heading to your location. As the spaceship door opens,  the paper plane enters successfully. As you leave the planet Thuban9, you opened the paper plane. The plane reads 'Thank You For Your Delivery, Here is 50 US dollars, Enjoy' ");
+
+                }
+                else if (actionChoiceTH == "C")
+                {
+                    Print("As you look into the tube, a blast of molten hot lava spits out onto your head and instantly kills you! Rest Easy Explorer!");
+                }
+            }
+            catch
+            {
+                throw new SystemException();
+            }
+
+        }
+        public static void tradeChoiceA()
         {
             string tradeChoiceA = Console.ReadLine().ToUpper();
             switch (tradeChoiceA)
@@ -352,6 +479,45 @@ namespace SpaceTrading
                     break;
             }
         }
+        public static void tradeChoiceB()
+        {
+            string tradeChoiceB = Console.ReadLine().ToUpper();
+            switch (tradeChoiceB)
+            {
+                case "A":
+                    Print("You have successfully cured your current thirst!");
+                    break;
+                case "B":
+                    Print("You have successfully topped off your spaceship with fresh fuel!");
+                    break;
+                case "C":
+                    Print("You have sucessfully cured your current hunger!");
+                    break;
+                case "D":
+                    Print("You successfully deliver the Web Package that you have had in you satchel! The Tarantula shoots web in excitement for the delivery. You safely return to the ship.");
+                    try
+                    {
+                        string line;
+                        StreamReader sr = new StreamReader(@"C:\Users\bulld\source\repos\SpaceTradingGame\SpaceTrading\blastoff.txt");
+                        line = sr.ReadLine();
+                        while (line != null)
+                        {
+                            Print(line, 1);
+                            line = sr.ReadLine();
+                        }
+                        sr.Close();
+                        Print("You've boarded the ship with your computerized crew. Choose your next destinantion");
+                        Print("Enter D)ecapod10, E)arth, 6)Tarantulon6, 9)Thuban9, T)ornadus !");
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine("Exception: " + e.Message);
+                    }
+                    break;
+                default:
+                    break;
+            }
+        }
         public static void Print(string text, int speed = 1)
         {
             foreach (char c in text)
@@ -361,5 +527,6 @@ namespace SpaceTrading
             }
             Console.WriteLine();
         }
+
     }
 }
