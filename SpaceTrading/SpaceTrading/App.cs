@@ -48,7 +48,7 @@ namespace SpaceTrading
             Console.WriteLine("q. to quit");
         }
 
-        private QuitReason HandleInput(ConsoleKey key)
+        public QuitReason HandleInput(ConsoleKey key)
         {
             switch (key)
             {
