@@ -10,7 +10,7 @@ namespace SpaceTrading
             
             {
                 //System.Console.SetWindowSize
-                Actions actions = new Actions();
+                App actions = new App();
                 actions.Run();
 
             
