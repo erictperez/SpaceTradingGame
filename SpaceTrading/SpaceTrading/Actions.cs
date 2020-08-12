@@ -14,24 +14,24 @@ namespace SpaceTrading
         {
 
         }
-        public static void Run()
-        {
-            //bool quit;
+        //public static void Run()
+        //{
+        //    //bool quit;
 
-            //do
-            {
-                startGame();
-                leaveChoice();
-                planetChoiceA();
-
-
-
-            }
-            //while (!quit);
+        //    //do
+        //    {
+        //        startGame();
+        //        leaveChoice();
+        //        planetChoiceA();
 
 
-            Console.WriteLine(); // Ensures "press any key to quit..." is on its own line
-        }
+
+        //    }
+        //    //while (!quit);
+
+
+        //    Console.WriteLine(); // Ensures "press any key to quit..." is on its own line
+        //}
         public static void closingMessage(QuitReason quitReason)
         {
             Console.Clear();
