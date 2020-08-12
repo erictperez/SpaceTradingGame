@@ -63,7 +63,7 @@ namespace SpaceTrading
             Print($"Hello, {name}! Welcome to your story.");
             try
             {
-                StreamReader sr = new StreamReader(@"C:\Users\bulld\source\repos\SpaceTradingGame\SpaceTrading\spaceship.txt");
+                StreamReader sr = new StreamReader(@"C:\Users\bulld\source\repos\SpaceTradingGame\SpaceTradingspaceship.txt");
                 line = sr.ReadLine();
                 while (line != null)
                 {
