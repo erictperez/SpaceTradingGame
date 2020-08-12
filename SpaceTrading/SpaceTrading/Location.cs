@@ -1,29 +1,55 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿
+using System;
 
-namespace SpaceTrading
+using System.Collections.Generic;
+
+
+
+namespace SpaceGame
+
 {
-    class Location
+
+    public class Location
+
     {
         public string name;
+
         public string description;
 
-        double xpos;
-        double ypos;
-        public Location(string name, string description, double xpos, double ypos)
+        double xPos;
+
+        double yPos;
+
+        public Location(string name, string description, double xPos, double yPos)
+
         {
             this.name = name;
+
             this.description = description;
-            this.xpos = xpos;
-            this.ypos = ypos;
+
+            this.xPos = xPos;
+
+            this.yPos = yPos;
+
+
         }
+
+
+
         public double DistanceTo(Location destination)
+
         {
-            var left = Math.Pow(this.xpos - destination.xpos, 2);
-            var right = Math.Pow(this.ypos - destination.ypos, 2);
+
+            var left = Math.Pow(this.xPos - destination.xPos, 2);
+
+            var right = Math.Pow(this.yPos - destination.yPos, 2);
+
+
 
             return Math.Sqrt(left + right);
+
         }
+
     }
 }
+
