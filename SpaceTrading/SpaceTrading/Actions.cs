@@ -63,7 +63,7 @@ namespace SpaceTrading
             Print($"Hello, {name}! Welcome to your story.");
             try
             {
-                StreamReader sr = new StreamReader(@"C:\Users\bulld\source\repos\SpaceTradingGame\SpaceTradingspaceship.txt");
+                StreamReader sr = new StreamReader(@"C:\Users\bulld\source\repos\SpaceTradingGame\SpaceTrading\spaceship.txt");
                 line = sr.ReadLine();
                 while (line != null)
                 {
@@ -114,7 +114,7 @@ namespace SpaceTrading
                     {
                         Console.WriteLine("Exception: " + e.Message);
                     }
-
+                    
                 }
 
             }
@@ -295,20 +295,23 @@ namespace SpaceTrading
             Print("You have two options. K)ill Scavenger   OR  T)rade with Scavenger");
             Print("Type your answer:");
 
-            using StreamReader sr = new StreamReader(@"C:\Users\bulld\source\repos\SpaceTradingGame\SpaceTrading\alienA.txt");
-            string line;
-            do
-            {
-                line = sr.ReadLine();
-                Console.WriteLine(line);
-            } while (line != null);
+
+            string leaveChoiceA = Console.ReadLine();
+            string actionChoiceA = leaveChoiceA.ToUpper();
 
 
-            string actionChoiceA = Console.ReadLine().ToUpper();
             try
             {
                 if (actionChoiceA == "K")
                 {
+                    using StreamReader sr = new StreamReader(@"C:\Users\bulld\source\repos\SpaceTradingGame\SpaceTrading\alienA.txt");
+                    string line;
+                    do
+                    {
+                        line = sr.ReadLine();
+                        Print(line);
+                    } while (line != null);
+
                     Print("You cannot kill the scavenger. Apparently, they are immune to death!");
                     Print("You were flayed and battered.");
                     Print("Rest In Peace Fellow Explorer! Try not to be so violent!");
@@ -316,6 +319,14 @@ namespace SpaceTrading
                 }
                 else if (actionChoiceA == "T")
                 {
+                    //using StreamReader sr = new StreamReader(@"C:\Users\bulld\source\repos\SpaceTradingGame\SpaceTrading\alienA.txt");
+                    //string line;
+                    //do
+                    //{
+                    //    line = sr.ReadLine();
+                    //    Print(line);
+                    //} while (line != null);
+
                     Print("You can Trade Currency for the following:");
                     Print("A)Liquid IV | B)Fuel | C)Food | D)Deliver Package");
                     tradeChoiceA();
@@ -331,6 +342,7 @@ namespace SpaceTrading
         public static void actionChoiceB()
         {
 
+
             Print("You have two options. D)rop Package off on a Pod   OR  C)ut into Pod because your curious!");
             Print("Type your answer:");
 
@@ -339,20 +351,19 @@ namespace SpaceTrading
             do
             {
                 line = sr.ReadLine();
-                Console.WriteLine(line);
+                Print(line);
             } while (line != null);
 
-
-            string actionChoiceA = Console.ReadLine().ToUpper();
+            string leaveChoiceB = Console.ReadLine();
+            string actionChoiceB = leaveChoiceB.ToUpper();
             try
             {
-                if (actionChoiceA == "D")
+                if (actionChoiceB == "D")
                 {
                     Print("The Pod Opens up and drops extra currency from excitement from its awaited package. You return to the ship! Superb Job!!");
-                    Print("You were flayed and battered.");
-                    Print("Rest In Peace Fellow Explorer! Try not to be so violent!");
+                    leaveChoice();
                 }
-                else if (actionChoiceA == "C")
+                else if (actionChoiceB == "C")
                 {
                     Print("The Pod Opens up and a long tailed snake creature crawls out! As it smiles at you, you feel a sense of self-worth. This creature was created just like all creatures. The difference is.....");
                     Print("This specific creature was made to eat human faces. It swiftly attaches to your space helmet and melds into the glass! This instantly kills you!");
