@@ -60,7 +60,7 @@ namespace SpaceTrading
             string line;
             Print("What is your name?: ");
             string name = Console.ReadLine();
-            Print($"Hello, {name}! Welcome to your story.");
+            Print($"Hello, {name}! Welcome to your story. You are a young 20 year old explorer. Born on Earth with a sweet RocketShip called 'The Chosen'! Let's Go!");
             try
             {
                 StreamReader sr = new StreamReader(@"C:\Users\bulld\source\repos\SpaceTradingGame\SpaceTrading\spaceship.txt");
@@ -127,7 +127,7 @@ namespace SpaceTrading
         public static void planetChoiceA()
         {
 
-            string upperchoice;
+            string planetChoiceA = Console.ReadLine().ToUpper();
             if (planetChoiceA == "A")
             {
                 try
@@ -161,7 +161,7 @@ namespace SpaceTrading
                 try
                 {
                     string line;
-                    StreamReader sr = new StreamReader(@"C:\Users\bulld\source\repos\SpaceTradingGame\SpaceTrading\amazonia.txt");
+                    StreamReader sr = new StreamReader(@"C:\Users\bulld\source\repos\SpaceTradingGame\SpaceTrading\decapod.txt");
                     line = sr.ReadLine();
                     while (line != null)
                     {
@@ -189,7 +189,7 @@ namespace SpaceTrading
                 try
                 {
                     string line;
-                    StreamReader sr = new StreamReader(@"C:\Users\bulld\source\repos\SpaceTradingGame\SpaceTrading\amazonia.txt");
+                    StreamReader sr = new StreamReader(@"C:\Users\bulld\source\repos\SpaceTradingGame\SpaceTrading\earth.txt");
                     line = sr.ReadLine();
                     while (line != null)
                     {
@@ -204,7 +204,7 @@ namespace SpaceTrading
                 }
 
                 Print("You have chosen Planet Earth. You set auto-pilot and head towards planet Earth. Due to the amount of deliveries you have, you conduct a intergalactic U-Turn because you know better!!!");
-
+                leaveChoice();
             }
 
         }
@@ -217,7 +217,7 @@ namespace SpaceTrading
                 try
                 {
                     string line;
-                    StreamReader sr = new StreamReader(@"C:\Users\bulld\source\repos\SpaceTradingGame\SpaceTrading\amazonia.txt");
+                    StreamReader sr = new StreamReader(@"C:\Users\bulld\source\repos\SpaceTradingGame\SpaceTrading\tornadus.txt");
                     line = sr.ReadLine();
                     while (line != null)
                     {
@@ -232,6 +232,7 @@ namespace SpaceTrading
                 }
 
                 Print("You have chosen Planet Tornadus. You enter a space storm near the planet. The space storm destroys the ship in route and YOU suffer a excruciating prolonged death! Time moves extremely slow! Your last remaining words were 'Why would I choose to go to a planet called Torn....'. As you try to speak your last living words, a space snake strikes your tongue and crawls inside your body. The only living thing in your spacesuit now is the space snake. RIP Explorer!!!!");
+                leaveChoice();
             }
 
         }
@@ -243,7 +244,7 @@ namespace SpaceTrading
                 try
                 {
                     string line;
-                    StreamReader sr = new StreamReader(@"C:\Users\bulld\source\repos\SpaceTradingGame\SpaceTrading\amazonia.txt");
+                    StreamReader sr = new StreamReader(@"C:\Users\bulld\source\repos\SpaceTradingGame\SpaceTrading\tarantula.txt");
                     line = sr.ReadLine();
                     while (line != null)
                     {
@@ -298,19 +299,41 @@ namespace SpaceTrading
 
             string leaveChoiceA = Console.ReadLine();
             string actionChoiceA = leaveChoiceA.ToUpper();
-
+            {
+                // File name  
+                string fileName = @"C:\Users\bulld\source\repos\SpaceTradingGame\SpaceTrading\alienA.txt";
+                try
+                {
+                    // Create a StreamReader  
+                    using (StreamReader reader = new StreamReader(fileName))
+                    {
+                        string line;
+                        // Read line by line  
+                        while ((line = reader.ReadLine()) != null)
+                        {
+                            Console.WriteLine(line);
+                        }
+                    }
+                }
+                catch (Exception exp)
+                {
+                    Console.WriteLine(exp.Message);
+                }
+                Console.ReadKey();
+            }
+            //using StreamReader sr = new StreamReader(@"C:\Users\bulld\source\repos\SpaceTradingGame\SpaceTrading\alienA.txt");
+            //string line;
+            //do
+            //{
+            //    line = sr.ReadLine();
+            //    Print(line);
+            //} while (line != null);
 
             try
             {
                 if (actionChoiceA == "K")
                 {
-                    //using StreamReader sr = new StreamReader(@"C:\Users\bulld\source\repos\SpaceTradingGame\SpaceTrading\alienA.txt");
-                    //string line;
-                    //do
-                    //{
-                    //    line = sr.ReadLine();
-                    //    Print(line);
-                    //} while (line != null);
+
 
                     Print("You cannot kill the scavenger. Apparently, they are immune to death!");
                     Print("You were flayed and battered.");
@@ -346,13 +369,13 @@ namespace SpaceTrading
             Print("You have two options. D)rop Package off on a Pod   OR  C)ut into Pod because your curious!");
             Print("Type your answer:");
 
-            using StreamReader sr = new StreamReader(@"C:\Users\bulld\source\repos\SpaceTradingGame\SpaceTrading\alienA.txt");
-            string line;
-            do
-            {
-                line = sr.ReadLine();
-                Print(line);
-            } while (line != null);
+            //using StreamReader sr = new StreamReader(@"C:\Users\bulld\source\repos\SpaceTradingGame\SpaceTrading\alienA.txt");
+            //string line;
+            //do
+            //{
+            //    line = sr.ReadLine();
+            //    Print(line);
+            //} while (line != null);
 
             string leaveChoiceB = Console.ReadLine();
             string actionChoiceB = leaveChoiceB.ToUpper();
@@ -368,7 +391,7 @@ namespace SpaceTrading
                     Print("The Pod Opens up and a long tailed snake creature crawls out! As it smiles at you, you feel a sense of self-worth. This creature was created just like all creatures. The difference is.....");
                     Print("This specific creature was made to eat human faces. It swiftly attaches to your space helmet and melds into the glass! This instantly kills you!");
                     Print("RIP Explorer but why would you cut into a Pod? Now you have to start all over!!!!!!!!!!");
-                    leaveChoice();
+                    
                 }
             }
             catch
@@ -403,9 +426,9 @@ namespace SpaceTrading
                 }
                 else if (actionChoiceTA == "B")
                 {
-                    Print("You trade your currency for the following:");
-                    tradeChoiceB();
-                }
+                    Print("You trade your currency for the following:"); 
+                    
+                }tradeChoiceB();
             }
             catch
             {
@@ -419,13 +442,13 @@ namespace SpaceTrading
             Print("You have three options. A) Crawl into the tube   OR  B) Set the package into the tube and return to ship immediately   OR C) Look in the tube!");
             Print("Type your answer:");
 
-            using StreamReader sr = new StreamReader(@"C:\Users\bulld\source\repos\SpaceTradingGame\SpaceTrading\alienA.txt");
-            string line;
-            do
-            {
-                line = sr.ReadLine();
-                Console.WriteLine(line);
-            } while (line != null);
+            //using StreamReader sr = new StreamReader(@"C:\Users\bulld\source\repos\SpaceTradingGame\SpaceTrading\alienA.txt");
+            //string line;
+            //do
+            //{
+            //    line = sr.ReadLine();
+            //    Console.WriteLine(line);
+            //} while (line != null);
 
 
             string actionChoiceTH = Console.ReadLine().ToUpper();
@@ -478,7 +501,7 @@ namespace SpaceTrading
                             line = sr.ReadLine();
                         }
                         sr.Close();
-                        Print("You've boarded the ship with your computerized crew. Choose your next destinantion");
+                        Print("You've boarded the ship with your computerized crew. Choose your next destination");
                         Print("Enter D)ecapod10, E)arth, 6)Tarantulon6, 9)Thuban9, T)ornadus !");
                     }
                     catch (Exception e)
@@ -529,6 +552,7 @@ namespace SpaceTrading
                     break;
             }
         }
+
         public static void Print(string text, int speed = 40)
         {
             foreach (char c in text)
