@@ -61,6 +61,16 @@ namespace SpaceTrading
 
             Actions.planetChoiceA();
 
+            Actions.planetChoiceD();
+
+            Actions.planetChoiceT();
+
+            Actions.planetChoiceTA();
+
+            Actions.planetChoiceTH();
+
+            Actions.planetChoiceE();
+
 
             eventLoop();
 
