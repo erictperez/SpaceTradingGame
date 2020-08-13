@@ -107,8 +107,8 @@ namespace SpaceTrading
                             line = sr.ReadLine();
                         }
                         sr.Close();
-                        Print("You've boarded the ship with your computerized crew. Choose your destinantion");
-                        Print("Enter A)mazonia, D)ecapod10, E)arth, 6)Tarantulon6, 9)Thuban9, T)ornadus !");
+                        Print("You've boarded the ship with your computerized crew. Choose your destination");
+                        Print("Enter A)mazonia, D)ecapod10, E)arth, TA)Tarantulon6, TH)Thuban9, T)ornadus !");
                     }
                     catch (Exception e)
                     {
@@ -238,7 +238,7 @@ namespace SpaceTrading
         public static void planetChoiceTA()
         {
             string planetChoiceTA = Console.ReadLine().ToUpper();
-            if (planetChoiceTA == "6")
+            if (planetChoiceTA == "TA")
             {
                 try
                 {
@@ -265,7 +265,7 @@ namespace SpaceTrading
         public static void planetChoiceTH()
         {
             string planetChoiceTH = Console.ReadLine().ToUpper();
-            if (planetChoiceTH == "9")
+            if (planetChoiceTH == "TH")
             {
                 try
                 {
@@ -304,13 +304,13 @@ namespace SpaceTrading
             {
                 if (actionChoiceA == "K")
                 {
-                    using StreamReader sr = new StreamReader(@"C:\Users\bulld\source\repos\SpaceTradingGame\SpaceTrading\alienA.txt");
-                    string line;
-                    do
-                    {
-                        line = sr.ReadLine();
-                        Print(line);
-                    } while (line != null);
+                    //using StreamReader sr = new StreamReader(@"C:\Users\bulld\source\repos\SpaceTradingGame\SpaceTrading\alienA.txt");
+                    //string line;
+                    //do
+                    //{
+                    //    line = sr.ReadLine();
+                    //    Print(line);
+                    //} while (line != null);
 
                     Print("You cannot kill the scavenger. Apparently, they are immune to death!");
                     Print("You were flayed and battered.");
@@ -529,7 +529,7 @@ namespace SpaceTrading
                     break;
             }
         }
-        public static void Print(string text, int speed = 1)
+        public static void Print(string text, int speed = 40)
         {
             foreach (char c in text)
             {

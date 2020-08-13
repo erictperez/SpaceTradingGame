@@ -53,23 +53,7 @@ namespace SpaceTrading
         {
 
 
-            Actions.startGame();
 
-
-            Actions.leaveChoice();
-
-
-            Actions.planetChoiceA();
-
-            Actions.planetChoiceD();
-
-            Actions.planetChoiceT();
-
-            Actions.planetChoiceTA();
-
-            Actions.planetChoiceTH();
-
-            Actions.planetChoiceE();
 
 
             eventLoop();
@@ -104,20 +88,29 @@ namespace SpaceTrading
 
                 Console.Clear();
 
+                Actions.startGame();
+
+
+                Actions.leaveChoice();
+
+
+                Actions.planetChoiceA();
+
+                Actions.planetChoiceD();
+
+                Actions.planetChoiceT();
+
+                Actions.planetChoiceTA();
+
+                Actions.planetChoiceTH();
+
+                Actions.planetChoiceE();
 
                 // print current location
 
-
-                Console.WriteLine($"Welcome to: {currentLocation.name}, {currentLocation.description}");
-
-
-                var key = UI.EllicitInput();
+                //quitReason = HandleInput(key);
 
 
-                quitReason = HandleInput(key);
-
-
-                PrintOptionList();
 
 
 
