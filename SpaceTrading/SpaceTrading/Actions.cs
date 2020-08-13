@@ -127,7 +127,7 @@ namespace SpaceTrading
         public static void planetChoiceA()
         {
 
-            string planetChoiceA = Console.ReadLine().ToUpper();
+            string upperchoice;
             if (planetChoiceA == "A")
             {
                 try
